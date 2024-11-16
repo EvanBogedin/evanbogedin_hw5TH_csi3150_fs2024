@@ -10,7 +10,6 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body onload="load()">
-    <header></header>
     <div class="interface-container">
       <section class="filter-section">
         <h2>Filter Results</h2>
@@ -26,9 +25,6 @@
               max="2099"
               step="1"
               value="2010"
-              width="10"
-              size="4"
-              maxlength="4"
             />
             <span>max</span>
             <input
@@ -45,13 +41,7 @@
           <h4>Brand</h4>
           <div class="brand-filter-container">
             <div class="check-box-container">
-              <input
-                type="checkbox"
-                checked
-                id="BMW"
-                name="BMW"
-                value="BMW"
-              />
+              <input type="checkbox" checked id="BMW" name="BMW" value="BMW" />
               <label for="BMW">BMW</label>
             </div>
             <div class="check-box-container">
@@ -243,7 +233,7 @@
               type="number"
               name="max-mileage"
               min="0"
-              max="1,000,000"
+              max="1000000"
               step="1"
               value="100000"
             />
@@ -361,7 +351,5 @@
         <div id="result" class="cards-container"></div>
       </section>
     </div>
-
-    <footer></footer>
   </body>
 </html>
