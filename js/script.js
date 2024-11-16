@@ -5,9 +5,7 @@ let formData = null;
 let formDataExists = false;
 
 function load() {
-  for (i in usedCars) {
     showResults(buildResults());
-  }
 }
 
 filterForm.addEventListener("submit", handleFilter);
