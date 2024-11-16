@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Used Car Site</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/usedCars.js" defer></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body onload="load()">
+    <header></header>
+    <div class="interface-container">
+      <section class="filter-section">
+        <h2>Filter Results</h2>
+        <hr />
+        <form id="filter-form">
+          <div class="year-filter-container">
+            <h4>Year Range</h4>
+            <span>min</span>
+            <input
+              type="number"
+              name="min-year"
+              min="1908"
+              max="2099"
+              step="1"
+              value="2010"
+              width="10"
+              size="4"
+              maxlength="4"
+            />
+            <span>max</span>
+            <input
+              type="number"
+              name="max-year"
+              min="1908"
+              max="2099"
+              step="1"
+              value="2024"
+            />
+          </div>
+          <br />
+          <hr />
+          <h4>Brand</h4>
+          <div class="brand-filter-container">
+            <div class="check-box-container">
+              <input type="checkbox" id="BMW" name="BMW" value="BMW" />
+              <label for="BMW">BMW</label>
+            </div>
+            <div class="check-box-container">
+              <input
+                type="checkbox"
+                id="Cadillac"
+                name="Cadillac"
+                value="Cadillac"
+              />
+              <label for="Cadillac">Cadillac</label>
+            </div>
+
+            <div class="check-box-container">
+              <input
+                type="checkbox"
+                id="Chevrolet"
+                name="Chevrolet"
+                value="Chevrolet"
+              />
+              <label for="Chevrolet">Chevrolet</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Dodge" name="Dodge" value="Dodge" />
+              <label for="Dodge">Dodge</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Ford" name="Ford" value="Ford" />
+              <label for="Ford">Ford</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Honda" name="Honda" value="Honda" />
+              <label for="Honda">Honda</label>
+            </div>
+
+            <div class="check-box-container">
+              <input
+                type="checkbox"
+                id="Hyundai"
+                name="Hyundai"
+                value="Hyundai"
+              />
+              <label for="Hyundai">Hyundai</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Jaguar" name="Jaguar" value="Jaguar" />
+              <label for="Jaguar">Jaguar</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Jeep" name="Jeep" value="Jeep" />
+              <label for="Jeep">Jeep</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Kia" name="Kia" value="Kia" />
+              <label for="Kia">Kia</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Lexus" name="Lexus" value="Lexsus" />
+              <label for="Lexus">Lexus</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Mazda" name="Mazda" value="Mazda" />
+              <label for="Mazda">Mazda</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Nissan" name="Nissan" value="Nissan" />
+              <label for="Nissan">Nissan</label>
+            </div>
+
+            <div class="check-box-container">
+              <input
+                type="checkbox"
+                id="Porsche"
+                name="Porsche"
+                value="Porsche"
+              />
+              <label for="Porsche">Porsche</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Subaru" name="Subaru" value="Subaru" />
+              <label for="Subaru">Subaru</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Tesla" name="Tesla" value="Tesla" />
+              <label for="Tesla">Tesla</label>
+            </div>
+
+            <div class="check-box-container">
+              <input type="checkbox" id="Toyota" name="Toyota" value="Toyota" />
+              <label for="Toyota">Toyota</label>
+            </div>
+
+            <div class="check-box-container">
+              <input
+                type="checkbox"
+                id="Volkswagen"
+                name="Volkswagen"
+                value="Volkswagen"
+              />
+              <label for="Volkswagen">Volkswagen</label>
+            </div>
+          </div>
+          <br />
+          <hr />
+          <div class="max-mileage-filter-container">
+            <h4>Maximum Mileage</h4>
+            <input
+              type="number"
+              name="max-mileage"
+              min="0"
+              max="1,000,000"
+              step="1"
+              value="100000"
+            />
+          </div>
+          <br />
+          <hr />
+          <div class="year-filter-container">
+            <h4>Price Range</h4>
+            <span>min</span>
+            <input
+              type="number"
+              name="min-price"
+              min="500"
+              max="1000000"
+              step="0.01"
+              value="10000"
+            />
+            <span>max</span>
+            <input
+              type="number"
+              name="max-price"
+              min="500"
+              max="1000000"
+              step="0.01"
+              value="70000"
+            />
+          </div>
+          <br />
+          <hr />
+          <h4>Color</h4>
+          <div class="color-filter-container">
+            <div class="check-box-container">
+              <input type="checkbox" id="Black" name="Black" value="Black" />
+              <label for="Black">Black</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Blue" name="Blue" value="Blue" />
+              <label for="Blue">Blue</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Gray" name="Gray" value="Gray" />
+              <label for="Gray">Gray</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Green" name="Green" value="Green" />
+              <label for="Green">Green</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Red" name="Red" value="Red" />
+              <label for="Red">Red</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Silver" name="Silver" value="Silver" />
+              <label for="Silver">Silver</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="White" name="White" value="White" />
+              <label for="White">White</label>
+            </div>
+            <div class="check-box-container">
+              <input type="checkbox" id="Yellow" name="Yellow" value="Yellow" />
+              <label for="Yellow">Yellow</label>
+            </div>
+          </div>
+
+          <br />
+
+          <input type="submit" value="Apply Filter" />
+        </form>
+      </section>
+      <section class="card-section">
+        <div class="spacer"></div>
+        <div id="result" class="cards-container"></div>
+      </section>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>
