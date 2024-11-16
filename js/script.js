@@ -3,12 +3,13 @@ const result = document.getElementById("result");
 
 let formData = null;
 
+//runs on page load
 function load() {
   showResults(buildResults());
 }
 
 filterForm.addEventListener("submit", handleFilter);
-
+//gets the form data from the form
 function handleFilter(e) {
   e.preventDefault();
   formData = new FormData(filterForm);
